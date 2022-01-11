@@ -5,37 +5,25 @@
       :showAddTask="showAddTask"
       text="Task Tracker"
     />
-    <div v-if="showAddTask">
-      <AddTask @newTask="newTask" />
-    </div>
-    <Tasks
-      v-bind:tasks="tasks"
-      @delete-Task="deleteTask"
-      @dbl-Click="dblClick"
-    />
-    <router-view></router-view>
+
+    <router-view :showAddTask="showAddTask"></router-view>
     <Footer />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-import Tasks from "./components/tasks.vue";
-import AddTask from "./components/AddTask.vue";
+
 import Footer from "./components/Footer.vue";
-import axios from "axios";
 
 export default {
   name: "App",
   components: {
     Header,
-    Tasks,
-    AddTask,
     Footer,
   },
   data() {
     return {
-      tasks: [],
       showAddTask: false,
     };
   },
@@ -68,9 +56,6 @@ export default {
     async fetchTask(id) {
       const res = await axios.get(`api/tasks/${id}`);
     },
-  },
-  async created() {
-    this.tasks = await this.fetchTasks();
   },
 };
 </script>
