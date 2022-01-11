@@ -4,12 +4,9 @@
     <Button
       @toggleClick="$emit('toggle-Click')"
       class="btn"
-      :btnText="showAddTask ? 'Close' : 'Show'"
-      color="green"
+      :btnText="showAddTask ? 'Close' : 'Add'"
+      :color="showAddTask ? 'red' : 'green'"
     />
-    <!--  <Button class="btn" btnText="Remove Task" color="red" /> -->
-
-    <!-- <Button class="btn" btnText="Update Task" color="blue" />-->
   </header>
 </template>
 

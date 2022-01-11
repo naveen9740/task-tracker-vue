@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Brush Teeth",
+      "reminder": true,
+      "day": "March 1st 6.30pm"
+    },
+    {
+      "id": 2,
+      "text": "Dinner",
+      "reminder": false,
+      "day": "March 1st 2.30pm"
+    },
+    {
+      "id": 3,
+      "text": "Sleep",
+      "reminder": true,
+      "day": "March 1st 10.30pm"
+    },
+    {
+      "text": "kill someone",
+      "day": "march 1",
+      "reminder": true,
+      "id": 4
+    }
+  ]
+}
